@@ -1,0 +1,142 @@
+
+.credit-card-form {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+	background-color: transparent;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.middle {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.card-logos {
+	margin-bottom: 0.5rem;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.card-logo {
+	height: 36px;
+	width: auto;
+	opacity: 0.7;
+	transition: opacity 0.2s ease;
+}
+
+.card-logo:hover {
+	opacity: 1;
+}
+
+.credit-card-form .form-group {
+	margin-bottom: 0;
+}
+
+.form-row {
+	display: flex;
+	gap: 1.2rem;
+}
+
+.credit-card-form label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #444;
+	font-weight: 500;
+}
+
+.required {
+	color: #e53e3e;
+}
+
+.payment-input {
+	width: 80%;
+	padding: 14px 15px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 15px;
+	transition: all 0.2s ease;
+}
+
+.payment-input:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.field-hint {
+	display: block;
+	margin-top: 4px;
+	font-size: 12px;
+	color: #6b7280;
+}
+
+.save-card-option {
+	margin-top: 1.01rem;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	gap: 8px;
+}
+
+.save-card-option input {
+	width: 16px;
+	height: 16px;
+	accent-color: #3b82f6;
+}
+
+.save-card-option label {
+	font-size: 14px;
+	color: #4b5563;
+	font-weight: 400;
+}
+
+.pay-btn {
+	width: 60%;
+	padding: 14px 15px;
+	background-color: #3b82f6;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin: 0 auto;
+}
+
+.pay-btn:hover {
+	background-color: #2563eb;
+	transform: translateY(-2px);
+}
+
+.pay-btn:active {
+	transform: translateY(0);
+}
+
+@media ( max-width : 600px) {
+	.credit-card-form {
+		padding: 1.5rem;
+	}
+	.form-row {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.card-logos {
+		gap: 15px;
+	}
+	.card-logo {
+		height: 30px;
+	}
+}

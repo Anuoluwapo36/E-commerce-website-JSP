@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+:root {
+    --primary-blue: #0071dc;
+    --primary-blue-dark:  linear-gradient(90deg, #007bff, #00b4d8, #0056b3);
+        --orange:  orange;
+    
+    --primary-yellow: #ffc220;
+    --primary-yellow-dark: orange;
+    --gray-light: #f5f5f5;
+    --gray: #e0e0e0;
+    --gray-dark: #888;
+    --text-dark: #111;
+    --text-light: #555;
+    --success-green: #008a00;
+    --error-red: #d32323;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --border-radius: 4px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, sans-serif;
+	color: #333;
+	line-height: 1.6;
+	min-height: 100vh;
+}
+
+.structure-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background: white;
+	padding: 15px 0;
+	
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.logo div {
+	gap: 12px;
+	display:flex;
+}
+
+#logo-img {
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+}
+
+.logo h5 {
+	font-size: 28px;
+	font-weight: 600;
+	font-family: 'Pacifico', cursive;
+	background: linear-gradient(90deg, #007bff, #00b4d8, #0056b3);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 0;
+}
+
+
+
+.container {
+	width: 100%;
+	max-width: 600px;
+}
+
+.deactivated-card {
+	background: transparent;
+	padding: 40px 40px;
+	border-radius: 16px;
+	text-align: center;
+}
+
+.deactivated-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+	color: #ff6b6b;
+	margin-bottom: 25px;
+}
+
+.icon svg {
+	stroke-width: 1.5;
+}
+
+h1 {
+	color: #2d3748;
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.message {
+	color: orange;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.reasons {
+	text-align: left;
+	color: #4a5568;
+	margin: 25px 0;
+	padding-left: 20px;
+	list-style-type: none;
+}
+
+.account-email {
+	color: #2c3e50;
+	font-weight: 500;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	display: inline-block;
+}
+
+.reasons li {
+	margin-bottom: 12px;
+	padding-left: 10px;
+	position: relative;
+}
+
+.reasons li:before {
+	content: "•";
+	color: #007bff;
+	font-weight: bold;
+	position: absolute;
+	left: -15px;
+}
+
+.contact-info {
+	margin-top: 35px;
+	padding-top: 25px;
+	border-top: 1px solid #e2e8f0;
+}
+
+.contact-info p {
+	color: #4a5568;
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+
+.contact-actions {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.btn {
+	padding: 14px 28px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	display: inline-block;
+}
+
+.btn.primary {
+	background: linear-gradient(90deg, #007bff, #00b4d8);
+	color: white;
+	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn.primary:hover {
+	background: linear-gradient(90deg, #0069d9, #0099c7);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn.secondary {
+	background: #f8f9fa;
+	color: #495057;
+	border: 1px solid #dee2e6;
+}
+
+.btn.secondary:hover {
+	background: #e9ecef;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media ( max-width : 768px) {
+	.deactivated-card {
+		padding: 40px 25px;
+	}
+	h1 {
+		font-size: 28px;
+	}
+	.contact-actions {
+		flex-direction: column;
+	}
+	.btn {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media ( max-width : 480px) {
+	.logo h5 {
+		font-size: 24px;
+	}
+	.deactivated-card {
+		padding: 30px 20px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	.message {
+		font-size: 16px;
+	}
+}
+
+
+
+header {
+
+	padding: 8px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	gap: var(--spacing-md);
+}
+
+
+
+
+
+.logo {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	position: relative;
+	padding:15px;
+	width: 100%;
+	max-width:500px;
+	height: 100%;
+	gap: var(--spacing-sm);
+}
+
+#logo-img {
+	height: 36px;
+}
+
+.logo {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+/* search bar code design staring point */
+.search-div {
+	width:100%;
+	max-width:800px;
+	height: 100%;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	position: relative;
+	padding:15px;
+	
+}
+
+
+
+.search-div input {
+	width:100%;
+	min-width:800px;
+	margin: 0 auto;
+	border-radius: 19px;
+	outline: none;
+	border: none;
+	padding: 15px 15px 15px 40px;
+	font-size: 0.9rem;
+	background-color: var(--gray-light);
+	box-sizing: border-box;
+}
+
+.search-div input:focus {
+	outline: 2px solid var(--orange);
+	background-color: var(--gray-light); 
+}
+
+.search-icon {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color:#777;
+}
+
+.search-div input:focus {
+	outline: 2px solid var(--orange);
+}
+
+.suggestions {
+	position: absolute;
+	top: 100%; 
+	left: 0;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	width: 100%;
+	background: white;
+	padding: 10px;
+	display: none;
+	border-radius: 10px;
+	z-index: 999;
+}
+
+.suggestion-items {
+	padding: 8px 12px; 
+	cursor: pointer;
+	margin-top:5px;
+	border-radius: 4px; 
+}
+.suggestion-items:hover {
+	background: #f0f0f0;
+}
+/* search bar code design end point */
+
+/* navigation code design staring point */
+.nav-div {
+	display: flex;
+	align-items: center;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding:15px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ol {
+	list-style: none;
+	gap: 20px;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+nav ol li {
+	list-style: none;
+	text-align: center;
+	margin: 5px 8px;
+}
+
+#link-direction #nav-icon {
+	width: 25px;
+	height: 25px;
+	object-fit: contain;
+}
+
+#nav-icon {
+	display: block;
+	margin: 0 auto;
+	width: 30px;
+	height: 30px;
+}
+
+nav li {
+	gap: 20px;
+	align-items: center;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+.nav-bar ol li span {
+	display: block;
+	margin-top: 5px;
+	font-size: 0.9rem;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
